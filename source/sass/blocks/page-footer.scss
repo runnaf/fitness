@@ -1,0 +1,55 @@
+.page-footer {
+  flex: 0 0 auto;
+  width: 100%;
+  background-color: $color-default-black;
+  padding-top: 44px;
+  padding-bottom: 44px;
+
+  @include vp-1199 {
+    padding-bottom: 63px;
+  }
+
+  @include vp-767 {
+    padding: 35px 0 35px;
+  }
+}
+
+.page-footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer__logo-container img {
+  width: 89px;
+  height: auto;
+}
+
+.page-footer nav {
+  align-self: center;
+  height: fit-content;
+}
+
+.page-footer ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+}
+
+.page-footer a {
+  color: $color-default-white;
+  padding: 20px;
+  font-size: 0.88em;
+  line-height: 1.17;
+}
+
+.page-footer li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-footer__social-container a {
+  padding: 12px;
+}

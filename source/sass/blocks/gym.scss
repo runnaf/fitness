@@ -1,0 +1,110 @@
+.gym {
+  background-color: $color-default-white;
+  color: $color-dark;
+}
+
+.gym h2 + p {
+  margin: 0;
+  margin-bottom: 55px;
+  font-size: 1.13em;
+  line-height: 1.5;
+}
+
+.gym p {
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.gym__container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 85px;
+}
+
+.gym img {
+  width: 660px;
+  height: auto;
+}
+
+.gym__desc-container h2 {
+  margin-bottom: 20px;
+  margin-top: 49px;
+}
+
+.gym__video-container {
+  position: absolute;
+  bottom: 0;
+  left: 37%;
+}
+
+.gym__video {
+  display: none;
+}
+
+.gym__cover {
+  position: relative;
+}
+
+.gym__cover button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-image: linear-gradient(44.89deg, hsla(220, 100%, 36%, 0.2) 25.38%, hsla(347, 98%, 47%, 0.2) 74.8%);
+  border-image-slice: 1;
+  background-color: transparent;
+  cursor: pointer;
+
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.8%);
+    border-radius: 50%;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    top: 0;
+    right: -10px;
+    left: 0;
+    margin: auto;
+    border: 8px solid transparent; /* Прозрачные границы */
+    border-left: 14px solid  $color-default-white; /* Добавляем треугольник */
+    width: 17px;
+    height: 17px;
+    z-index: 100;
+  }
+}
+
+.gym__cover img {
+  width: 364px;
+  height: auto;
+}
+
+.swiper {
+  min-width: 320px;
+  width: 100%;
+}
+
+.swiper-pointer-events {
+  touch-action: pan-y;
+}

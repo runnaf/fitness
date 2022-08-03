@@ -1,0 +1,57 @@
+.contact {
+  flex: 1;
+  padding: 70px 124px;
+  border-top: 1px solid #74819c;
+  background-color: $color-default-white;
+  color: $color-dark;
+}
+
+.contact h2 {
+  margin: 0;
+  margin-bottom: 50px;
+  font-family: $ff-Bebas-Neue;
+  font-size: 3.06em;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-dark;
+}
+
+.contact dl {
+  position: relative;
+  columns: 2;
+  margin: 0;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    left: 50%;
+    background-color: #74819C;
+  }
+}
+
+.contact dt {
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.contact dd {
+  margin: 0;
+  font-size: 0.88em;
+  line-height: 1.5;
+}
+
+.contact dl > div {
+  margin-bottom: 20px;
+}
+
+.contact a {
+  font-size: 0.88em;
+  line-height: 1.5;
+  color: $color-dark;
+  user-select: none;
+}

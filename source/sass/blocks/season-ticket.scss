@@ -1,0 +1,191 @@
+.season-ticket {
+  background-color: $color-gray-background;
+}
+
+.season-ticket__container {
+  position: relative;
+}
+
+.season-ticket h2 {
+  text-align: center;
+}
+
+.season-ticket ol {
+  margin: 0 auto 448px;
+  padding: 0;
+  padding-bottom: 38px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  list-style: none;
+  z-index: 100;
+}
+
+.season-ticket ol > li {
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  padding-right: 46px;
+  display: flex;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.season-ticket ul {
+  display: none;
+  flex-wrap: wrap;
+  width: 1160px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.season-ticket ul > li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-default-white;
+  margin-right: 40px;
+  padding: 68px 77px;
+  min-height: 448px;
+  border: 7px solid transparent;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    border-image: linear-gradient(#d10a42, #0041ca);
+    border-image-slice: 1;
+  }
+}
+
+.season-ticket ul > li:hover button {
+  background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  color: $color-default-white;
+  border: none;
+}
+
+.season-ticket ul > li > p {
+  margin-bottom: auto;
+}
+
+
+.season-ticket a {
+  position: relative;
+  font-size: 1.25em;
+  line-height: 1.5;
+  color: $color-gray-dark;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.season-ticket li.is-active > a {
+  color: $color-dark;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    background-color: #d10a42;
+  }
+}
+
+.season-ticket li.is-active ul {
+  display: flex;
+}
+
+.season-ticket h3 {
+  color: $color-dark;
+  font-weight: 700;
+  font-size: 1.63;
+  line-height: 1.12;
+  margin: 0;
+  text-align: center;
+}
+
+.season-ticket p {
+  color: #495a7d;
+  text-align: center;
+  margin: 0;
+}
+
+.season-ticket button {
+  width: 100%;
+  margin-top: 59px;
+  min-height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: $color-dark;
+  border: 2px solid $color-dark;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.75em;
+  line-height: 1.17;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    color: $color-default-white;
+    border: none;
+  }
+}
+
+.season-ticket__price-container {
+  display: flex;
+  align-items: end;
+  width: 100%;
+  justify-content: center;
+  z-index: 100;
+}
+
+.season-ticket__price-container p {
+  position: relative;
+  width: 100%;
+  color: $color-blue;
+  font-weight: 700;
+  font-size: 3.75em;
+  line-height: 1.5;
+  min-height: 48px;
+  align-items: center;
+
+  &::before {
+    content: attr(data-shadow);
+    position: absolute;
+    color: hsla(0, 0%, 91%, 0.48);
+    font-size: 2em;
+    line-height: 1;
+    right: 0;
+    left: 0;
+    bottom: -20%;
+    margin: 0 auto;
+    z-index: -1;
+  }
+}
+
+.season-ticket__price-container span {
+  color: $color-dark;
+  font-size: 3.75em;
+  line-height: 1.5;
+  font-family: $ff-Bebas-Neue;
+}
+
+.season-ticket__image {
+  position: absolute;
+  right: -113px;
+  bottom: -19%;
+}
+
+.season-ticket__image img {
+  width: 321px;
+  height: auto;
+}

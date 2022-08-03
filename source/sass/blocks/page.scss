@@ -1,0 +1,17 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+  min-width: 320px;
+  font-family: $ff-Roboto-Condensed;
+  font-weight: normal;
+  font-size: $fz-default;
+  color: $color-light;
+  position: relative;
+}
+
+.page.is-stop-scrolling {
+  height: 100vh;
+  overflow: hidden;
+}
