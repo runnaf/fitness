@@ -84,6 +84,7 @@
   width: auto;
   height: 100%;
   object-fit: cover;
+  background-color: $color-gray-light;
 
   @include vp-1199 {
     height: 345px;
@@ -93,6 +94,9 @@
   @include vp-767 {
     margin-bottom: 40px;
     height: 313px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
   }
 }
 
@@ -132,7 +136,6 @@
 .gym__visual {
   position: relative;
   max-width: 660px;
-  background-color: $color-gray-light;
 
   @include vp-1199 {
     max-width: 100%;
@@ -150,6 +153,8 @@
   height: min-content;
   bottom: -116px;
   left: -64px;
+  background-color: $color-gray-light;
+  width: fit-content;
 
   @include vp-1199 {
     right: 0;

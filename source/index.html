@@ -21,7 +21,11 @@
         <header>
           <div class="prime__header container">
             <a>
-              <img src="./img/svg/logo-desktop.svg" alt="Логотип сайта 'Фитнес центр Supergym'" width="89" height="20">
+              <picture>
+                <source media="(max-width: 1999px)" srcset="./img/svg/logo-tablet.svg">
+                <source media="(max-width: 767px)" srcset="./img/svg/logo-mobile.svg">
+                <img src="./img/svg/logo-desktop.svg" alt="Логотип сайта 'Фитнес центр Supergym'" width="89" height="20">
+              </picture>
             </a>
             <a href="tel:+78005555555">8-800-555-55-55</a>
           </div>
@@ -54,9 +58,14 @@
           </div>
           <div class="prime__image">
             <picture>
-              <source srcset="./img/content/prime.webp 1x, ./img/content/prime@2x.webp 2x" type="image/webp">
+              <!-- 1х: 324px; 2x: 648px -->
+              <source media="(max-width: 1199px)"
+                srcset="./img/content/prime-tablet.webp 1x, ./img/content/prime-tablet@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 1199px)"
+                srcset="./img/content/prime-tablet.jpg 1x, ./img/content/prime-tablet@2x.jpg 2x">
+              <source srcset="./img/content/prime-desktop.webp 1x, ./img/content/prime-desktop@2x.webp 2x" type="image/webp">
               <!-- 1х: 500px; 2x: 1000px -->
-              <img src="./img/content/prime.jpg" srcset="./img/content/prime@2x.jpg 2x" alt="героический мужчина в футболке супермэна анфас на темном фоне смотрящий вдаль" width="500" height="556">
+              <img src="./img/content/prime-desktop.jpg" srcset="./img/content/prime-desktop@2x.jpg 2x" alt="героический мужчина в футболке супермэна анфас на темном фоне смотрящий вдаль" width="500" height="556">
             </picture>
           </div>
         </div>
@@ -71,9 +80,15 @@
           </div>
           <div class="gym__visual">
             <picture>
-              <source srcset="./img/content/gym.webp 1x, ./img/content/gym@2x.webp 2x" type="image/webp">
-              <!-- 1х: 500px; 2x: 1000px -->
-              <img src="./img/content/gym.jpg" srcset="./img/content/gym@2x.jpg 2x" alt="героический мужчина в футболке супермэна анфас на темном фоне смотрящий вдаль" width="500" height="556">
+              <!-- 1х: 320px; 2x: 640px -->
+              <source media="(max-width: 767px)" srcset="./img/content/gym-mobile.webp 1x, ./img/content/gym-mobile@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)" srcset="./img/content/gym-mobile.jpg 1x, ./img/content/gym-mobile@2x.jpg 2x">
+              <!-- 1х: 678px; 2x: 1334px -->
+              <source media="(max-width: 1199px)" srcset="./img/content/gym-tablet.webp 1x, ./img/content/gym-tablet@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 1199px)" srcset="./img/content/gym-tablet.jpg 1x, ./img/content/gym-tablet@2x.jpg 2x">
+              <source srcset="./img/content/gym-desktop.webp 1x, ./img/content/gym-desktop@2x.webp 2x" type="image/webp">
+              <!-- 1х: 660px; 2x: 1320px -->
+              <img src="./img/content/gym-desktop.jpg" srcset="./img/content/gym-desktop@2x.jpg 2x" alt="тренажерный зал с тренажерами" width="660" height="441">
             </picture>
             <div class="gym__video-container">
               <div class="gym__video">
@@ -81,9 +96,15 @@
               </div>
               <div class="gym__cover">
                 <picture>
-                  <source srcset="./img/content/gym-video.webp 1x, ./img/content/gym-video@2x.webp 2x" type="image/webp">
+                  <!-- 1х: 320px; 2x: 640px -->
+                  <source media="(max-width: 767px)" srcset="./img/content/gym-video-mobile.webp 1x, ./img/content/gym-video-mobile@2x.webp 2x" type="image/webp">
+                  <source media="(max-width: 767px)" srcset="./img/content/gym-video-mobile.jpg 1x, ./img/content/gym-video-mobile@2x.jpg 2x">
+                  <!-- 1х: 266px; 2x: 532px -->
+                  <source media="(max-width: 1199px)" srcset="./img/content/gym-video-tablet.webp 1x, ./img/content/gym-video-tablet@2x.webp 2x" type="image/webp">
+                  <source media="(max-width: 1199px)" srcset="./img/content/gym-video-tablet.jpg 1x, ./img/content/gym-video-tablet@2x.jpg 2x">
+                  <source srcset="./img/content/gym-video-desktop.webp 1x, ./img/content/gym-video-desktop@2x.webp 2x" type="image/webp">
                   <!-- 1х: 364px; 2x: 828px -->
-                  <img src="./img/content/gym-video.jpg" srcset="./img/content/gym-video@2x.jpg 2x" data-gym-picture alt="тренажерный зал с тренажерами" width="364" height="228">
+                  <img src="./img/content/gym-video-desktop.jpg" srcset="./img/content/gym-video-desktop@2x.jpg 2x" data-gym-picture alt="тренажерный зал с тренажерами" width="364" height="228">
                 </picture>
                 <button type="button" data-video-btn>
                   <span class="visually-hidden">Начать просмотр видео</span>
@@ -224,9 +245,15 @@
           </div>
           <div class="super-games__img-container">
             <picture>
-              <source srcset="./img/content/super-games.webp 1x, ./img/content/super-games@2x.webp 2x" type="image/webp">
+              <!-- 1х: 290px; 2x: 580px -->
+              <source media="(max-width: 767px)" srcset="./img/content/super-games-mobile.webp 1x, ./img/content/super-games-mobile@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 767px)" srcset="./img/content/super-games-mobile.jpg 1x, ./img/content/super-games-mobile@2x.jpg 2x">
+              <!-- 1х: 386px; 2x: 772px -->
+              <source media="(max-width: 1199px)" srcset="./img/content/super-games-tablet.webp 1x, ./img/content/super-games-tablet@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 1199px)" srcset="./img/content/super-games-tablet.jpg 1x, ./img/content/super-games-tablet@2x.jpg 2x">
+              <source srcset="./img/content/super-games-desktop.webp 1x, ./img/content/super-games-desktop@2x.webp 2x" type="image/webp">
               <!-- 1х: 660px; 2x: 1320px -->
-              <img src="./img/content/super-games.jpg" srcset="./img/content/super-games@2x.jpg 2x" alt="спортсмен гимнаст в облаке меловой пыли" width="660" height="500">
+              <img src="./img/content/super-games-desktop.jpg" srcset="./img/content/super-games-desktop@2x.jpg 2x" alt="спортсмен гимнаст в облаке меловой пыли" width="660" height="500">
             </picture>
           </div>
         </div>
@@ -240,9 +267,9 @@
                   <div class="trainers__slide-front-side" data-front-side>
                     <h3>Анна Павлова</h3>
                     <picture>
-                      <source srcset="./img/content/cards/anna-pavlova.webp 1x, ./img/content/cards/anna-pavlova@2x.webp 2x" type="image/webp">
+                      <source srcset="./img/content/cards/anna-pavlova-desktop.webp 1x, ./img/content/cards/anna-pavlova-desktop@2x.webp 2x" type="image/webp">
                       <!-- 1х: 260px; 2x: 520px -->
-                      <img src="./img/content/cards/anna-pavlova.jpg" srcset="./img/content/cards/anna-pavlova@2x.jpg 2x" alt="девушка с длинными темными волосами белой кожей и голубыми глазами в темнофиолетовой толстовке" width="260" height="294">
+                      <img src="./img/content/cards/anna-pavlova-desktop.jpg" srcset="./img/content/cards/anna-pavlova-desktop@2x.jpg 2x" alt="девушка с длинными темными волосами белой кожей и голубыми глазами в темнофиолетовой толстовке" width="260" height="294">
                     </picture>
                   </div>
                   <div class="trainers__slide-reverse-side" data-recerse-side>
@@ -261,9 +288,9 @@
                   <div class="trainers__slide-front-side" data-front-side>
                     <h3>Алексей Лавров</h3>
                     <picture>
-                      <source srcset="./img/content/cards/aleksey-lavrov.webp 1x, ./img/content/cards/aleksey-lavrov@2x.webp 2x" type="image/webp">
+                      <source srcset="./img/content/cards/aleksey-lavrov-desktop.webp 1x, ./img/content/cards/aleksey-lavrov-desktop@2x.webp 2x" type="image/webp">
                       <!-- 1х: 260px; 2x: 520px -->
-                      <img src="./img/content/cards/aleksey-lavrov.jpg" srcset="./img/content/cards/aleksey-lavrov@2x.jpg 2x" alt="мужчина с короткой стрижкой щетиной и темными глазами в черном свитере" width="260" height="294">
+                      <img src="./img/content/cards/aleksey-lavrov-desktop.jpg" srcset="./img/content/cards/aleksey-lavrov-desktop@2x.jpg 2x" alt="мужчина с короткой стрижкой щетиной и темными глазами в черном свитере" width="260" height="294">
                     </picture>
                   </div>
                   <div class="trainers__slide-reverse-side" data-recerse-side>
@@ -282,9 +309,15 @@
                   <div class="trainers__slide-front-side" data-front-side>
                     <h3>Александр Пашков</h3>
                     <picture>
-                      <source srcset="./img/content/cards/alexsander-pashkov.webp 1x, ./img/content/cards/alexsander-pashkov@2x.webp 2x" type="image/webp">
+                      <!-- 1х: 226px; 2x: 452px -->
+                      <source media="(max-width: 767px)" srcset="./img/content/cards/alexsander-pashkov-mobile.webp 1x, ./img/cards/content/alexsander-pashkov-mobile@2x.webp 2x" type="image/webp">
+                      <source media="(max-width: 767px)" srcset="./img/content/cards/alexsander-pashkov-mobile.jpg 1x, ./img/content/cards/alexsander-pashkov-mobile@2x.jpg 2x">
+                      <!-- 1х: 268px; 2x: 536px -->
+                      <source media="(max-width: 1199px)" srcset="./img/content/cards/alexsander-pashkov-tablet.webp 1x, ./img/content/cards/alexsander-pashkov-tablet@2x.webp 2x" type="image/webp">
+                      <source media="(max-width: 1199px)" srcset="./img/content/cards/alexsander-pashkov-tablet.jpg 1x, ./img/content/cards/alexsander-pashkov-tablet@2x.jpg 2x">
+                      <source srcset="./img/content/cards/alexsander-pashkov-desktop.webp 1x, ./img/content/cards/alexsander-pashkov-desktop@2x.webp 2x" type="image/webp">
                       <!-- 1х: 260px; 2x: 520px -->
-                      <img src="./img/content/cards/alexsander-pashkov.jpg" srcset="./img/content/cards/alexsander-pashkov@2x.jpg 2x" alt="девушка с длинными темными волосами белой кожей и голубыми глазами в темнофиолетовой толстовке" width="260" height="294">
+                      <img src="./img/content/cards/alexsander-pashkov-desktop.jpg" srcset="./img/content/cards/alexsander-pashkov-desktop@2x.jpg 2x" alt="мужчина с короткой стрижкой щетиной в очках" width="260" height="294">
                     </picture>
                   </div>
                   <div class="trainers__slide-reverse-side" data-recerse-side>
@@ -302,6 +335,14 @@
                 <div class="trainers__slide is-notjs" data-slide>
                   <div class="trainers__slide-front-side" data-front-side>
                     <h3>Мария Кетова</h3>
+                    <picture>
+                      <!-- 1х: 268px; 2x: 536px -->
+                      <source media="(max-width: 1199px)" srcset="./img/content/cards/maria-ketova-tablet.webp 1x, ./img/content/cards/maria-ketova-tablet@2x.webp 2x" type="image/webp">
+                      <source media="(max-width: 1199px)" srcset="./img/content/cards/maria-ketova-tablet.jpg 1x, ./img/content/cards/maria-ketova-tablet@2x.jpg 2x">
+                      <source srcset="./img/content/cards/maria-ketova-desktop.webp 1x, ./img/content/cards/maria-ketova-desktop@2x.webp 2x" type="image/webp">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <img src="./img/content/cards/maria-ketova-desktop.jpg" srcset="./img/content/cards/maria-ketova-desktop@2x.jpg 2x" alt="девушка с длинными темными волосами белой кожей и темными глазами в черном с белой надписью худи" width="260" height="294">
+                    </picture>
                     <picture>
                       <source srcset="./img/content/cards/maria-ketova.webp 1x, ./img/content/cards/maria-ketova@2x.webp 2x" type="image/webp">
                       <!-- 1х: 260px; 2x: 520px -->
@@ -319,14 +360,14 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide" >
                 <div class="trainers__slide is-notjs" data-slide>
                   <div class="trainers__slide-front-side" data-front-side>
                     <h3>Анна Павлова</h3>
                     <picture>
-                      <source srcset="./img/content/cards/anna-pavlova.webp 1x, ./img/content/cards/anna-pavlova@2x.webp 2x" type="image/webp">
+                      <source srcset="./img/content/cards/anna-pavlova-desktop.webp 1x, ./img/content/cards/anna-pavlova-desktop@2x.webp 2x" type="image/webp">
                       <!-- 1х: 260px; 2x: 520px -->
-                      <img src="./img/content/cards/anna-pavlova.jpg" srcset="./img/content/cards/anna-pavlova@2x.jpg 2x" alt="девушка с длинными темными волосами белой кожей и голубыми глазами в темнофиолетовой толстовке" width="260" height="294">
+                      <img src="./img/content/cards/anna-pavlova-desktop.jpg" srcset="./img/content/cards/anna-pavlova-desktop@2x.jpg 2x" alt="девушка с длинными темными волосами белой кожей и голубыми глазами в темнофиолетовой толстовке" width="260" height="294">
                     </picture>
                   </div>
                   <div class="trainers__slide-reverse-side" data-recerse-side>
@@ -345,9 +386,9 @@
                   <div class="trainers__slide-front-side" data-front-side>
                     <h3>Алексей Лавров</h3>
                     <picture>
-                      <source srcset="./img/content/cards/aleksey-lavrov.webp 1x, ./img/content/cards/aleksey-lavrov@2x.webp 2x" type="image/webp">
+                      <source srcset="./img/content/cards/aleksey-lavrov-desktop.webp 1x, ./img/content/cards/aleksey-lavrov-desktop@2x.webp 2x" type="image/webp">
                       <!-- 1х: 260px; 2x: 520px -->
-                      <img src="./img/content/cards/aleksey-lavrov.jpg" srcset="./img/content/cards/aleksey-lavrov@2x.jpg 2x" alt="мужчина с короткой стрижкой щетиной и темными глазами в черном свитере" width="260" height="294">
+                      <img src="./img/content/cards/aleksey-lavrov-desktop.jpg" srcset="./img/content/cards/aleksey-lavrov-desktop@2x.jpg 2x" alt="мужчина с короткой стрижкой щетиной и темными глазами в черном свитере" width="260" height="294">
                     </picture>
                   </div>
                   <div class="trainers__slide-reverse-side" data-recerse-side>
@@ -366,9 +407,13 @@
                   <div class="trainers__slide-front-side" data-front-side>
                     <h3>Александр Пашков</h3>
                     <picture>
-                      <source srcset="./img/content/cards/anna-pavlova.webp 1x, ./img/content/cards/anna-pavlova@2x.webp 2x" type="image/webp">
+                      <source media="(max-width: 767px)" srcset="./img/content/cards/alexsander-pashkov-mobile.webp 1x, ./img/cards/content/alexsander-pashkov-mobile@2x.webp 2x" type="image/webp">
+                      <source media="(max-width: 767px)" srcset="./img/content/cards/alexsander-pashkov-mobile.jpg 1x, ./img/content/cards/alexsander-pashkov-mobile@2x.jpg 2x">
+                      <source media="(max-width: 1199px)" srcset="./img/content/cards/alexsander-pashkov-tablet.webp 1x, ./img/content/cards/alexsander-pashkov-tablet@2x.webp 2x" type="image/webp">
+                      <source media="(max-width: 1199px)" srcset="./img/content/cards/alexsander-pashkov-tablet.jpg 1x, ./img/content/cards/alexsander-pashkov-tablet@2x.jpg 2x">
+                      <source srcset="./img/content/cards/alexsander-pashkov-desktop.webp 1x, ./img/content/cards/alexsander-pashkov-desktop@2x.webp 2x" type="image/webp">
                       <!-- 1х: 260px; 2x: 520px -->
-                      <img src="./img/content/cards/anna-pavlova.jpg" srcset="./img/content/cards/anna-pavlova@2x.jpg 2x" alt="девушка с длинными темными волосами белой кожей и голубыми глазами в темнофиолетовой толстовке" width="260" height="294">
+                      <img src="./img/content/cards/alexsander-pashkov-desktop.jpg" srcset="./img/content/cards/alexsander-pashkov-desktop@2x.jpg 2x" alt="мужчина с короткой стрижкой щетиной в очках" width="260" height="294">
                     </picture>
                   </div>
                   <div class="trainers__slide-reverse-side" data-recerse-side>
@@ -383,9 +428,16 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="trainers__slide" data-slide>
+                <div class="trainers__slide is-notjs" data-slide>
                   <div class="trainers__slide-front-side" data-front-side>
                     <h3>Мария Кетова</h3>
+                    <picture>
+                      <source media="(max-width: 1199px)" srcset="./img/content/cards/maria-ketova-tablet.webp 1x, ./img/content/cards/maria-ketova-tablet@2x.webp 2x" type="image/webp">
+                      <source media="(max-width: 1199px)" srcset="./img/content/cards/maria-ketova-tablet.jpg 1x, ./img/content/cards/maria-ketova-tablet@2x.jpg 2x">
+                      <source srcset="./img/content/cards/maria-ketova-desktop.webp 1x, ./img/content/cards/maria-ketova-desktop@2x.webp 2x" type="image/webp">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <img src="./img/content/cards/maria-ketova-desktop.jpg" srcset="./img/content/cards/maria-ketova-desktop@2x.jpg 2x" alt="девушка с длинными темными волосами белой кожей и темными глазами в черном с белой надписью худи" width="260" height="294">
+                    </picture>
                     <picture>
                       <source srcset="./img/content/cards/maria-ketova.webp 1x, ./img/content/cards/maria-ketova@2x.webp 2x" type="image/webp">
                       <!-- 1х: 260px; 2x: 520px -->
@@ -453,7 +505,6 @@
                 <span>лет</span>
               </div>
             </li>
-
           </ul>
         </div>
       </section>
@@ -473,9 +524,15 @@
                 </div>
                 <div class="stocks__image">
                   <picture>
-                    <source srcset="./img/content/stock.webp 1x, ./img/content/stock@2x.webp 2x" type="image/webp">
+                    <!-- 1х: 290px; 2x: 580px -->
+                    <source media="(max-width: 767px)" srcset="./img/content/stock-tablet.webp 1x, ./img/content/stock-tablet@2x.webp 2x" type="image/webp">
+                    <source media="(max-width: 767px)" srcset="./img/content/stock-tablet.jpg 1x, ./img/content/stock-tablet@2x.jpg 2x">
+                    <!-- 1х: 399px; 2x: 798px -->
+                    <source media="(max-width: 1199px)" srcset="./img/content/stock-tablet.webp 1x, ./img/content/stock-tablet@2x.webp 2x" type="image/webp">
+                    <source media="(max-width: 1199px)" srcset="./img/content/stock-tablet.jpg 1x, ./img/content/stock-tablet@2x.jpg 2x">
+                    <source srcset="./img/content/stock-desktop.webp 1x, ./img/content/stock-desktop@2x.webp 2x" type="image/webp">
                     <!-- 1х: 500px; 2x: 1000px -->
-                    <img src="./img/content/stock.jpg" srcset="./img/content/stock@2x.jpg 2x" alt="спортивная светловолосая девушка в спортивном голубом костюме сфотографированная снизу" width="399" height="462">
+                    <img src="./img/content/stock-desktop.jpg" srcset="./img/content/stock-desktop@2x.jpg 2x" alt="спортивная светловолосая девушка в спортивном голубом костюме сфотографированная снизу" width="399" height="462">
                   </picture>
                 </div>
               </div>

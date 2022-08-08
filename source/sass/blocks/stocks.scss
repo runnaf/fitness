@@ -228,8 +228,8 @@
 
 .stocks__image img {
   width: 280px;
+  height: auto;
   object-fit: cover;
-  object-position: -44px;
 
   @include vp-1199 {
     height: 100%;
@@ -240,9 +240,9 @@
 
   @include vp-767 {
     width: 100%;
-    min-height: 299px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    min-width: 290px;
+    min-height: fit-content;
+    height: 299px;
+    object-position: 0 -5px;
   }
 }

@@ -2,7 +2,7 @@ const getTabs = () => {
   const links = document.querySelectorAll('[data-ticket-link]');
   const items = document.querySelectorAll('[data-ticket-content]');
 
-  if (links !== null) {
+  if (links.length > 0) {
     links.forEach(openingTabs);
   }
 
@@ -15,10 +15,12 @@ const getTabs = () => {
           itemLink.classList.remove('is-active');
         });
 
-        items.forEach((item)=>{
-          item.target = false;
-          item.classList.remove('is-active');
-        });
+        if (items.length > 0) {
+          items.forEach((item)=>{
+            item.target = false;
+            item.classList.remove('is-active');
+          });
+        }
 
         const index = link.getAttribute('href');
         const list = document.querySelector(index);
