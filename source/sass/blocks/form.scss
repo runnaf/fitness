@@ -1,46 +1,86 @@
 .form {
+  max-width: 580px;
+  width: 100%;
   flex: 1;
   background-color: $color-dark;
-  padding: 70px 170px 70px 103px;
+  padding: 61px 14.5% 45px 0;
+
+  @include vp-1199 {
+    max-width: 100%;
+    padding: 63px calc(50% - 32.8%) 69px;
+  }
+
+  @include vp-767 {
+    padding: 64px calc(50% - 45.5%) 67px;
+  }
 }
 
 .form h2 {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 28px;
   font-family: $ff-Bebas-Neue;
+  color: $color-default-white;
   font-size: 3.06em;
   line-height: 1.3;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  text-align: center;
+
+  @include vp-1199 {
+    text-align: left;
+    margin-bottom: 22px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 24px;
+  }
 }
 
 .form form {
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(2, 1fr);
+
+  @include vp-1199 {
+    row-gap: 29px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
 }
 
 .form input {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #74819c;
-  padding: 10px 10px 10px 0;
+  padding: 10px 10px 5px 0;
   color: $color-default-white;
   font-size: 0.88em;
   line-height: 1.17;
+
+  @include vp-1199 {
+    margin-right: 34px;
+  }
+
+  @include vp-767 {
+    font-size: 0.9em;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
 }
 
 .form input::placeholder {
   color: $color-default-white;
   font-size: 0.88em;
   line-height: 1.17;
+  letter-spacing: 0.08em;
 }
 
 .form button {
   width: 100%;
   grid-column: 1/-1;
-  padding: 20px;
+  padding: 16px 20px;
   border: 3px solid $color-default-white;
   background-color: transparent;
   letter-spacing: 0.05em;
@@ -49,4 +89,14 @@
   line-height: 1.17;
   color: $color-default-white;
   cursor: pointer;
+
+  @include vp-1199 {
+    margin-right: 30px;
+    width: auto;
+  }
+
+  @include vp-767 {
+    margin-right: 0;
+    margin-top: 13px;
+  }
 }

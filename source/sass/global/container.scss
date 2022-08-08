@@ -1,16 +1,24 @@
 .container {
   max-width: 1160px;
-  width: 84.92%;
+  width: 86%;
   margin: 0 auto;
   padding-top: 120px;
   padding-bottom: 120px;
 
+  @include vp-1274 {
+    width: 93%;
+  }
+
   @include vp-1199 {
-    width: 95%;
+    width: 88.3%;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
-    width: 84.8%;
+    width: 91%;
+    padding-top: 69px;
+    padding-bottom: 70px;
   }
 }
 
@@ -23,4 +31,16 @@
   line-height: 1;
   letter-spacing: 0.03em;
   color: $color-dark;
+
+  @include vp-1199 {
+    font-size: 2.63em;
+    text-align: center;
+    margin-bottom: 41px;
+  }
+
+  @include vp-767 {
+    font-size: 2.1em;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+  }
 }

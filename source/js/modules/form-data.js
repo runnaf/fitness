@@ -1,30 +1,20 @@
 const storingFormData = () => {
-  // const form = document.querySelector('[data-form]');
-  // const fields = form.querySelectorAll('[data-field]');
-  // const checkbox = form.querySelector('[data-field-checkbox]');
-  // const formModal = document.querySelector('[data-form-modal]');
-  // const fieldsModal = formModal.querySelectorAll('[data-field-modal]');
-  // const checkboxModal = formModal.querySelector('[data-field-modal-checkbox]');
+  const form = document.querySelector('[data-form]');
+  const fields = form.querySelectorAll('[data-field]');
 
-  // if (fields.length > 0 && form !== null) {
-  //   getDataForm(form, fields, checkbox);
-  // }
+  if (fields.length > 0 && form !== null) {
+    getDataForm(form, fields);
+  }
 
-  // if (fieldsModal.length > 0 && formModal !== null) {
-  //   getDataForm(formModal, fieldsModal, checkboxModal);
-  // }
-
-  // function getDataForm(formName, fieldsName, checkboxName) {
-  //   formName.addEventListener('submit', () => {
-  //     fieldsName.forEach((field) => {
-  //       localStorage.setItem(field.name, field.value);
-  //     });
-  //   });
-
-  //   if (checkboxName !== null) {
-  //     localStorage.setItem(checkboxName.name, checkboxName.checked);
-  //   }
-  // }
+  function getDataForm(formName, fieldsName) {
+    formName.addEventListener('submit', () => {
+      localStorage.clear();
+      fieldsName.forEach((field) => {
+        localStorage.setItem(field.name, field.value);
+        field.value = '';
+      });
+    });
+  }
 };
 
 export {storingFormData};

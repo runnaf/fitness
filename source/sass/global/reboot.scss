@@ -35,6 +35,21 @@ body {
 a {
   color: $color-light;
   text-decoration: none;
+  opacity: 0.3;
+  user-select: none;
+
+  &[href] {
+    opacity: 1;
+  }
+
+  &[href]:hover,
+  &[href]:focus-visible {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.5;
+  }
 }
 
 img,
@@ -123,4 +138,18 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+  user-select: none;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }

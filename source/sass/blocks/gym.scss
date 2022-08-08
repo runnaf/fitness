@@ -1,51 +1,214 @@
 .gym {
   background-color: $color-default-white;
   color: $color-dark;
+  padding-bottom: 118px;
+  padding-top: 120px;
+
+  @include vp-1199 {
+    padding: 0;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
 }
 
 .gym h2 + p {
   margin: 0;
-  margin-bottom: 55px;
+  margin-bottom: 39px;
   font-size: 1.13em;
   line-height: 1.5;
+  letter-spacing: 0.01em;
+
+  @include vp-1199 {
+    margin-bottom: 34px;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    font-weight: 700;
+    font-size: 1.1em;
+    letter-spacing: 0.01em;
+    margin-bottom: 24px;
+  }
 }
 
 .gym p {
   margin: 0;
   font-weight: 300;
   line-height: 1.5;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+
+  @include vp-1199 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+    &:nth-child(4n) {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    text-align: left;
+    width: 89%;
+    font-size: 1em;
+    letter-spacing: 0;
+    margin-left: 0;
+  }
 }
 
 .gym__container {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 56.8%;
   column-gap: 85px;
+  padding: 0;
+  margin-bottom: 116px;
+
+  @include vp-1199 {
+    grid-template-columns: 100%;
+    padding-top: 98px;
+    padding-bottom: 98px;
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 .gym img {
-  width: 660px;
-  height: auto;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+
+  @include vp-1199 {
+    height: 345px;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+    height: 313px;
+  }
+}
+
+.gym__desc-container {
+  margin-left: 60px;
+
+  @include vp-1199 {
+    margin: 0;
+    margin-bottom: 35px;
+  }
+
+  @include vp-767 {
+    width: 91%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    letter-spacing: 0.04em;
+    margin-bottom: 25px;
+  }
 }
 
 .gym__desc-container h2 {
-  margin-bottom: 20px;
+  margin-bottom: 6px;
   margin-top: 49px;
+
+  @include vp-1199 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    text-align: left;
+    letter-spacing: 0.01em;
+  }
+}
+
+.gym__visual {
+  position: relative;
+  max-width: 660px;
+  background-color: $color-gray-light;
+
+  @include vp-1199 {
+    max-width: 100%;
+    margin-bottom: 82px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
 }
 
 .gym__video-container {
   position: absolute;
-  bottom: 0;
-  left: 37%;
+  align-self: center;
+  height: min-content;
+  bottom: -116px;
+  left: -64px;
+
+  @include vp-1199 {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    bottom: -82px;
+  }
+
+  @include vp-767 {
+    position: static;
+  }
 }
 
-.gym__video {
+.gym__video-container img {
+  width: 364px;
+  height: auto;
+
+  @include vp-1199 {
+    width: 266px;
+    height: 167px;
+  }
+
+  @include vp-767 {
+    min-width: 320px;
+    height: 167px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.gym__video iframe {
   display: none;
+  border: none;
+  outline: none;
+  width: 364px;
+  height: 230px;
+
+  @include vp-1199 {
+    width: 266px;
+    height: 167px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include vp-767 {
+    min-width: 320px;
+    width: 100%;
+  }
 }
 
 .gym__cover {
   position: relative;
+  width: fit-content;
+  background-color: $color-dark-blue;
+
+  @include vp-1199 {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .gym__cover button {
@@ -58,8 +221,8 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 2px solid transparent;
-  border-image: linear-gradient(44.89deg, hsla(220, 100%, 36%, 0.2) 25.38%, hsla(347, 98%, 47%, 0.2) 74.8%);
+  border: 2px solid;
+  border-color: hsla(220, 100%, 36%, 0.2) hsla(347, 98%, 47%, 0.2);
   border-image-slice: 1;
   background-color: transparent;
   cursor: pointer;
@@ -88,16 +251,36 @@
     left: 0;
     margin: auto;
     border: 8px solid transparent; /* Прозрачные границы */
-    border-left: 14px solid  $color-default-white; /* Добавляем треугольник */
-    width: 17px;
-    height: 17px;
+    border-left: 13px solid  $color-default-white; /* Добавляем треугольник */
+    width: 16px;
+    height: 16px;
     z-index: 100;
+  }
+
+  @include vp-1199 {
+    width: 77px;
+    height: 77px;
+
+    &::after {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  @include vp-767 {
+    width: 70px;
+    height: 70px;
+
+    &::before {
+      border-width: 8px;
+      border-left: 8px solid $color-default-white;
+    }
   }
 }
 
 .gym__cover img {
   width: 364px;
-  height: auto;
+  height: 230px;
 }
 
 .swiper {

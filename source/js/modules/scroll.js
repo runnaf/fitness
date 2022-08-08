@@ -8,11 +8,10 @@ function scrolling() {
     container: window,
   });
 
-  const trigger = document.querySelector('[data-link-form]');
+  const trigger = document.querySelector('[data-season-ticket]');
   if (trigger !== null) {
     moveTo.registerTrigger(trigger);
   }
 }
-
 
 export {scrolling};

@@ -1,29 +1,32 @@
-import {openingMenu} from './modules/menu';
+import {playingVideo} from './modules/playing-video';
 import {scrolling} from './modules/scroll';
 import {storingFormData} from './modules/form-data';
-import {openingModal} from './modules/opening-modal';
-import {getMoreAbout} from './modules/more-about';
+import {getTabs} from './modules/get-tabs';
 import {getMaskForPhone} from './modules/maskForPhone';
 import {getSlider} from './modules/slider';
+import {changingSlider} from './modules/changing-slider';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
   // Menu
 
-  openingMenu();
+  // playingVideo
+
+  playingVideo();
 
   // Slider
 
   getSlider();
+  changingSlider();
 
   // Scroll
 
   scrolling();
 
-  // More about
+  // Tabs
 
-  getMoreAbout();
+  getTabs();
 
   // Form Data
 
@@ -31,10 +34,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Mask for phone input
   getMaskForPhone();
-
-  // Opening modal window
-
-  openingModal();
 
   // Utils
   // ---------------------------------
