@@ -110,11 +110,16 @@
 
 .trainers__slide-front-side img {
   width: 100%;
+  max-width: 260px;
   object-fit: cover;
+
+  @include vp-1199 {
+    min-width: 268px;
+  }
 
   @include vp-767 {
     padding: 0;
-    height: 274px;
+    min-width: 226px;
   }
 }
 
@@ -139,8 +144,7 @@
   }
 
   @include vp-767 {
-    padding: 45px 0 20px 28px;
-    max-width: 226px;
+    padding: 46px 0 20px 28px;
   }
 }
 
@@ -242,6 +246,7 @@
   }
 
   @include vp-767 {
+    width: 47px;
     justify-content: center;
 
     &::after {
@@ -264,6 +269,7 @@
   }
 
   @include vp-767 {
+    width: 47px;
     justify-content: center;
 
     &::after {

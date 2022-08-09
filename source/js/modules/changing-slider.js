@@ -2,19 +2,16 @@ const changingSlider = () => {
   const fontSliders = document.querySelectorAll('[data-front-side]');
   const sliders = document.querySelectorAll('[data-slide]');
   const breakpoint = window.matchMedia('(min-width:1200px)');
-
   const breakpointChecker = () => {
-    if (fontSliders.length > 0 && sliders.length > 0) {
-      if (breakpoint.matches) {
-        sliders.forEach((item)=>{
-          if (!item.classList.contains('is-notjs')) {
-            item.classList.add('is-notjs');
-          }
-        });
-      } else {
-        removeClass(sliders, 'is-notjs');
-        fontSliders.forEach(flippingSliderClick);
-      }
+    if (breakpoint.matches) {
+      sliders.forEach((item)=>{
+        if (!item.classList.contains('is-notjs')) {
+          item.classList.add('is-notjs');
+        }
+      });
+    } else {
+      removeClass(sliders, 'is-notjs');
+      fontSliders.forEach(flippingSliderClick);
     }
   };
 
