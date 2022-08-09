@@ -3434,8 +3434,6 @@ button.swiper-pagination-bullet {
 
   .prime__image img {
     height: 388px;
-    -o-object-position: -10px -2px;
-    object-position: -10px -2px;
   }
 
   .prime__social-container {
@@ -3822,8 +3820,8 @@ button.swiper-pagination-bullet {
   }
 
   .stocks__main-item {
-    -ms-grid-columns: 1fr 59%;
-    grid-template-columns: 1fr 59%;
+    -ms-grid-columns: 1fr auto;
+    grid-template-columns: 1fr auto;
   }
 
   .stocks__desc {
@@ -4483,6 +4481,7 @@ button.swiper-pagination-bullet {
   }
 
   .stocks__image img {
+    max-width: 350px;
     width: 100%;
     min-height: 299px;
     height: 300px;
