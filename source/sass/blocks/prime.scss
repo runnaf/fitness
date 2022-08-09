@@ -31,7 +31,7 @@
   object-position: 0 0;
 
   @include vp-1199 {
-    width: 82px;
+    width: 80px;
   }
 
   @include vp-767 {
@@ -271,6 +271,7 @@
 
   @include vp-1199 {
     height: 388px;
+    object-position: -10px -2px;
   }
 }
 

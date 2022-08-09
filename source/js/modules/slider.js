@@ -42,4 +42,3 @@ function getSlider() {
 }
 
 export {getSlider};
-
