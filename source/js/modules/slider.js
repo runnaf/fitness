@@ -7,8 +7,10 @@ function getSlider() {
       nextEl: '.reviews__button-next',
       prevEl: '.reviews__button-prev',
     },
-    mousewheel: true,
-    keyboard: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
   });
 
   const swiperTrainer = new Swiper('.trainers__swiper', {
@@ -20,7 +22,10 @@ function getSlider() {
       prevEl: '.trainers__button-prev',
     },
     mousewheel: true,
-    keyboard: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
 
     breakpoints: {
       320: {

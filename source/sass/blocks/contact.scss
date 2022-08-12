@@ -39,7 +39,8 @@
 
 .contact dl {
   position: relative;
-  columns: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin: 0;
   margin-left: 5px;
 
@@ -100,9 +101,18 @@
 .contact dl > div {
   margin-bottom: 20px;
 
+  &:nth-child(2) {
+    grid-column: 1/2;
+  }
+
   &:nth-child(3n),
   &:nth-child(4n) {
+    grid-column: 2/3;
     margin-left: 54px;
+  }
+
+  &:nth-child(3) {
+    grid-row: 1/2;
   }
 
   @include vp-1199 {

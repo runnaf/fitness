@@ -11,9 +11,9 @@ const storingFormData = () => {
       localStorage.clear();
       fieldsName.forEach((field) => {
         localStorage.setItem(field.name, field.value);
-        field.value = '';
       });
     });
+    formName.reset();
   }
 };
 

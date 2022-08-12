@@ -2,7 +2,6 @@ import {playingVideo} from './modules/playing-video';
 import {scrolling} from './modules/scroll';
 import {storingFormData} from './modules/form-data';
 import {getTabs} from './modules/get-tabs';
-import {getMaskForPhone} from './modules/maskForPhone';
 import {getSlider} from './modules/slider';
 import {changingSlider} from './modules/changing-slider';
 
@@ -31,9 +30,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // Form Data
 
   storingFormData();
-
-  // Mask for phone input
-  getMaskForPhone();
 
   // Utils
   // ---------------------------------

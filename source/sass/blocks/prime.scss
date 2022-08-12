@@ -263,7 +263,6 @@
 }
 
 .prime__image img {
-  max-width: 500px;
   height: 556px;
   object-fit: cover;
   object-position: 0 0;
@@ -302,7 +301,7 @@
 .prime__social-container a {
   font-size: 0.75em;
   line-height: 1.71;
-  min-width: 50px;
+  min-width: 15px;
   min-height: 34px;
   display: flex;
   justify-content: flex-end;

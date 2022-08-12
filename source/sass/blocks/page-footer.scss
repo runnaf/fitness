@@ -18,7 +18,6 @@
 .page-footer__container {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
 
@@ -63,8 +62,9 @@
 .page-footer__logo-container a {
   opacity: 1;
   display: flex;
-  align-items: center;
   height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .page-footer nav {
@@ -82,6 +82,7 @@
 .page-footer ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   height: fit-content;
@@ -159,6 +160,10 @@
 
 .page-footer__social-container ul {
   justify-content: start;
+  width: max-content;
+  max-width: 109px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .page-footer__social-container a {
@@ -188,10 +193,8 @@
 
 .page-footer__social-container li {
   margin-left: 11px;
-
-  &:first-child {
-    margin-left: 0;
-  }
+  margin-top: 5px;
+  margin-bottom: 5px;
 
   @include vp-1199 {
     margin: 0;
