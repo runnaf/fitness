@@ -2428,6 +2428,7 @@ button:disabled,
 
 .page-footer__logo-container img {
   width: 87px;
+  min-width: 87px;
   height: auto;
 }
 
@@ -2442,9 +2443,6 @@ button:disabled,
 }
 
 .page-footer nav {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -4043,7 +4041,7 @@ button.swiper-pagination-bullet {
 
   .page-footer {
     padding-bottom: 33px;
-    padding-top: 30px;
+    padding-top: 33px;
   }
 
   .page-footer__container {
@@ -4056,6 +4054,7 @@ button.swiper-pagination-bullet {
   }
 
   .page-footer__logo-container img {
+    min-width: 80px;
     width: 80px;
   }
 
@@ -4068,22 +4067,17 @@ button.swiper-pagination-bullet {
   }
 
   .page-footer__nav-container a {
-    padding: 15px;
+    padding: 17px 15px;
     font-size: 0.9em;
   }
 
   .page-footer__social-container {
     padding: 0;
-    margin-top: 14px;
+    margin-top: 8px;
   }
 
   .page-footer__social-container a > div {
     padding: 0;
-  }
-
-  .page-footer__social-container li {
-    margin: 0;
-    margin-left: 11px;
   }
 }
 
@@ -4530,7 +4524,7 @@ button.swiper-pagination-bullet {
 
   .stocks__container {
     padding-top: 69px;
-    padding-bottom: 67px;
+    padding-bottom: 69px;
   }
 
   .stocks h2 {
@@ -4555,10 +4549,6 @@ button.swiper-pagination-bullet {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
-  }
-
-  .stocks li:last-child {
-    margin-top: 1px;
   }
 
   .stocks li:last-child p {
@@ -4620,7 +4610,7 @@ button.swiper-pagination-bullet {
   }
 
   .reviews h2 {
-    margin-bottom: 43px;
+    margin-bottom: 41px;
   }
 
   .reviews__slider {
@@ -4681,7 +4671,7 @@ button.swiper-pagination-bullet {
   }
 
   .reviews__button-next.swiper-button-next::after {
-    font-size: 18px;
+    font-size: 1.4em;
   }
 
   .reviews__button-prev.swiper-button-prev {
@@ -4689,12 +4679,13 @@ button.swiper-pagination-bullet {
   }
 
   .reviews__button-prev.swiper-button-prev::after {
-    font-size: 18px;
+    font-size: 1.4em;
   }
 
   .form-contact__container {
     width: 100%;
     padding-bottom: 0;
+    padding-top: 70px;
   }
 
   .form {
@@ -4727,6 +4718,7 @@ button.swiper-pagination-bullet {
   }
 
   .contact h2 {
+    margin-left: 0;
     margin-bottom: 30px;
   }
 
@@ -4778,6 +4770,7 @@ button.swiper-pagination-bullet {
   }
 
   .page-footer__logo-container img {
+    min-width: 68px;
     width: 68px;
   }
 
@@ -4817,8 +4810,13 @@ button.swiper-pagination-bullet {
   }
 
   .page-footer__social-container {
-    margin-top: 11px;
+    margin-top: 7px;
     margin-left: 1px;
+  }
+
+  .page-footer__social-container ul {
+    max-width: 100%;
+    width: 100%;
   }
 
   .page-footer__social-container a {
@@ -4830,11 +4828,11 @@ button.swiper-pagination-bullet {
   }
 
   .page-footer__social-container li {
-    margin: 0;
+    margin-left: 0;
     margin-right: 11px;
   }
 
   .page-footer__social-container li:last-child {
-    margin: 0;
+    margin-right: 0;
   }
 }
