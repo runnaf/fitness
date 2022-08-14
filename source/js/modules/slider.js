@@ -1,21 +1,29 @@
-import Swiper, {Navigation} from 'swiper';
+import {Swiper} from 'swiper/swiper-bundle.esm.browser.min.js';
 
-function getSlider() {
+const getSliderSwiper = () => {
   const swiper = new Swiper('.reviews__slider-container', {
-    modules: [Navigation],
+    cssMode: true,
     navigation: {
-      nextEl: '.reviews__button-next',
-      prevEl: '.reviews__button-prev',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    mousewheel: true,
     keyboard: {
       enabled: true,
-      onlyInViewport: false,
+      onlyInViewport: true,
+      pageUpDown: true,
     },
   });
 
   const swiperTrainer = new Swiper('.trainers__swiper', {
+    controller: {
+      inverse: true,
+    },
     loop: true,
-    modules: [Navigation],
 
     navigation: {
       nextEl: '.trainers__button-next',
@@ -44,6 +52,6 @@ function getSlider() {
   });
 
   return (swiper, swiperTrainer);
-}
+};
 
-export {getSlider};
+export {getSliderSwiper};

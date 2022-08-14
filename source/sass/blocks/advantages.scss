@@ -48,7 +48,7 @@
   @include vp-1199 {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
-    row-gap: 37px;
+    row-gap: 39px;
     width: 100%;
   }
 
@@ -112,7 +112,7 @@
   @include vp-1199 {
     margin: 0;
     padding: 0;
-    padding-top: 8px;
+    padding-top: 6px;
     padding-bottom: 3px;
     min-height: fit-content;
 
@@ -135,7 +135,7 @@
 
     &:last-child {
       padding: 0;
-      padding-top: 10px;
+      padding-top: 6px;
       column-gap: 31px;
     }
   }
@@ -309,8 +309,6 @@
 }
 
 .advantages__text-container {
-  // min-width: 74px;
-
   &--first {
     padding-left: 9px;
 

@@ -238,20 +238,19 @@
   top: 0;
   bottom: 0;
   width: 42px;
-  right: 0;
+  right: -3px;
   background-color: $color-default-white;
   margin-top: 0;
 
   &::after {
+    font-size: 2em;
+    font-weight: normal;
     color: #afafaf;
   }
 
   @include vp-1199 {
+    right: 0;
     justify-content: end;
-
-    &::after {
-      font-size: 2em;
-    }
   }
 
   @include vp-767 {
@@ -269,20 +268,19 @@
   top: 0;
   bottom: 0;
   width: 42px;
-  left: 0;
+  left: -3px;
   background-color: $color-default-white;
   margin-top: 0;
 
   &::after {
+    font-size: 2em;
+    font-weight: normal;
     color: #afafaf;
   }
 
   @include vp-1199 {
+    left: 0;
     justify-content: start;
-
-    &::after {
-      font-size: 2em;
-    }
   }
 
   @include vp-767 {

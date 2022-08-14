@@ -3,7 +3,7 @@
 
   @include vp-1199 {
     padding-top: 0;
-    padding-bottom: 98px;
+    padding-bottom: 99px;
     width: 90%;
   }
 
@@ -38,6 +38,7 @@
 
   @include vp-1199 {
     min-width: 564px;
+    padding-top: 53px;
   }
 
   @include vp-767 {
@@ -131,9 +132,18 @@
 
 .reviews__button-next.swiper-button-next {
   right: 4px;
+  height: 100%;
+  top: 0;
 
   &::after {
+    font-size: 2em;
     color: #afafaf;
+  }
+
+  @include vp-1199 {
+    &::after {
+      font-size: 2em;
+    }
   }
 
   @include vp-767 {
@@ -147,9 +157,19 @@
 
 .reviews__button-prev.swiper-button-prev {
   left: 4px;
+  height: 100%;
+  top: 0;
 
   &::after {
+    font-size: 2em;
     color: #afafaf;
+  }
+
+  @include vp-1199 {
+    &::after {
+      top: 48%;
+      font-size: 2em;
+    }
   }
 
   @include vp-767 {

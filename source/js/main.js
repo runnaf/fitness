@@ -2,8 +2,8 @@ import {playingVideo} from './modules/playing-video';
 import {scrolling} from './modules/scroll';
 import {storingFormData} from './modules/form-data';
 import {getTabs} from './modules/get-tabs';
-import {getSlider} from './modules/slider';
 import {changingSlider} from './modules/changing-slider';
+import {getSliderSwiper} from './modules/slider';
 
 // ---------------------------------
 
@@ -15,8 +15,8 @@ window.addEventListener('DOMContentLoaded', () => {
   playingVideo();
 
   // Slider
+  getSliderSwiper();
 
-  getSlider();
   changingSlider();
 
   // Scroll
