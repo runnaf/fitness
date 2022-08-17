@@ -23,18 +23,33 @@
   }
 }
 
-.stocks ul {
+.stocks__container-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 40px;
   column-gap: 38px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.stocks__main-item {
+  border: none;
+  color: $color-default-white;
+  min-height: 432px;
+}
+
+.stocks ul {
   margin: 0;
   padding: 0;
   list-style: none;
 
   @include vp-1199 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    row-gap: 30px;
   }
 
   @include vp-767 {
@@ -53,46 +68,22 @@
   border-image-slice: 1;
   color: $color-dark-blue;
   min-height: 211px;
-  grid-column: 2/3;
+  margin-bottom: 40px;
 
-  &:first-child {
-    padding: 0;
-    grid-column: 1/2;
-    grid-row: 1/3;
-    border: none;
-    color: $color-default-white;
-    min-height: 432px;
+  &:last-child {
+    margin-bottom: 0;
   }
 
   @include vp-1199 {
     min-height: 211px;
-
-    &:first-child {
-      grid-column: 1/3;
-      grid-row: 1/2;
-      width: 100%;
-    }
-
-    &:nth-child(2n) {
-      grid-column: 1/2;
-    }
+    height: auto;
+    margin-bottom: 0;
   }
 
   @include vp-767 {
     padding: 30px 20px 38px;
     grid-column: 1/2;
     text-align: center;
-
-    &:first-child {
-      min-height: 588px;
-      grid-column: 1/2;
-    }
-
-    &:last-child {
-      & p {
-        margin-left: 7px;
-      }
-    }
   }
 }
 
@@ -134,6 +125,10 @@
     bottom: 0;
     height: 1px;
     background-color: $color-dark-blue;
+  }
+
+  @include vp-1199 {
+    margin-top: 20px;
   }
 
   @include vp-767 {

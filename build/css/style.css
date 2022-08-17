@@ -1917,7 +1917,7 @@ button:disabled,
   margin-bottom: 51px;
 }
 
-.stocks ul {
+.stocks__container-list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -1926,6 +1926,15 @@ button:disabled,
   -webkit-column-gap: 38px;
   -moz-column-gap: 38px;
   column-gap: 38px;
+}
+
+.stocks__main-item {
+  border: none;
+  color: #ffffff;
+  min-height: 432px;
+}
+
+.stocks ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1950,22 +1959,11 @@ button:disabled,
   border-image-slice: 1;
   color: #1c3374;
   min-height: 211px;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
+  margin-bottom: 40px;
 }
 
-.stocks li:first-child {
-  padding: 0;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
-  border: none;
-  color: #ffffff;
-  min-height: 432px;
+.stocks li:last-child {
+  margin-bottom: 0;
 }
 
 .stocks h3 {
@@ -3428,7 +3426,7 @@ button.swiper-pagination-bullet {
   .container h2 {
     font-size: 2.63em;
     text-align: center;
-    margin-bottom: 41px;
+    margin-bottom: 42px;
   }
 
   .prime {
@@ -3875,29 +3873,28 @@ button.swiper-pagination-bullet {
     padding-bottom: 98px;
   }
 
-  .stocks ul {
+  .stocks__container-list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     gap: 30px;
-    row-gap: 30px;
+  }
+
+  .stocks ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 
   .stocks li {
     min-height: 211px;
+    height: auto;
+    margin-bottom: 0;
   }
 
-  .stocks li:first-child {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1/3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1/2;
-    width: 100%;
-  }
-
-  .stocks li:nth-child(2n) {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
+  .stocks a {
+    margin-top: 20px;
   }
 
   .stocks__main-item {
@@ -4542,17 +4539,6 @@ button.swiper-pagination-bullet {
     -ms-grid-column-span: 1;
     grid-column: 1/2;
     text-align: center;
-  }
-
-  .stocks li:first-child {
-    min-height: 588px;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-  }
-
-  .stocks li:last-child p {
-    margin-left: 7px;
   }
 
   .stocks p {
