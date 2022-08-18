@@ -541,7 +541,7 @@
             <h2>бесплатное занятие </h2>
             <form action="https://echo.htmlacademy.ru/" method="post" data-form>
               <input type="text" placeholder="Имя" name="user_name" minlength="1" pattern="^[а-яА-ЯёЁa-zA-Z \-]+$" data-field required>
-              <input type="tel" placeholder="Телефон" name="phone" minlength="11" maxlength="19" pattern="/^[\d\+][\d\(\)\ -]{9,14}\d$/" data-field data-phone required>
+              <input type="tel" placeholder="Телефон" name="phone" pattern="^[\+\d]?[\d\(\) -]+$" data-field data-phone required>
               <button type="submit">отправить</button>
             </form>
           </section>
